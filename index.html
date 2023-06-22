@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LeaveLetter</title>
+    <link rel="stylesheet" href="./LeaveLetterGenerator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e84ba717c2.js" crossorigin="anonymous"></script>
+    <script src="./LeaveletterGenerator.js" defer></script>
+</head>
+<body id="body">
+    <div id="container1">
+      <h1 id="heading1">Leave Letter Generator</h1>
+    </div>
+    <div id="headingContainer">
+     <h1 id="heading2">Heading</h1>
+     <input type="range" id="headingrange" min="20" max="100" oninput="fontsize()">
+     <input type="color" id="headingcolor" oninput="headingcolor()">
+    </div>
+    <div id="bgcolorContainer">
+     <h1 id="bgheading">BackgroundColor</h1>
+     <input type="color" id="bgcolor" oninput="backgroundcolor()">
+      <button id="aleft"   ><i class="fa-solid fa-align-left"   onclick="left()"     ></i></button>
+      <button id="acenter" ><i class="fa-solid fa-align-center" onclick="center()" ></i></button>
+      <button id="aright"  ><i class="fa-solid fa-align-right"  onclick="right()"   ></i></button>
+      <button id="ajustify"><i class="fa-solid fa-align-justify"onclick="justify()"></i></button>
+    </div>
+    <div id="fontsizecontainer">
+      <h1 id="font">Lorem ipsum dolor sit amet consectetur</h1>
+       <input type="color" id="fontcolor" oninput="fontcolor()">
+    </div>
+    <form action="./output.html">
+    <table id="table">
+    <tr>
+     <td> <label>FROM NAME </label></td>
+     <td>:</td>
+      <td><input type="text" id="fname" placeholder="FROM NAME"></td>
+    </tr>
+    <tr>
+      <td><label>FROM ADDRESS</label></td>
+      <td>:</td>
+      <td><input type="text" id="faddress" placeholder="FROM ADDRESS"></td>
+    </tr>
+    <tr>
+      <td><label>TODAYS DATE</label></td>
+      <td>:</td>
+      <td><input type="date" id="date"></td>
+    </tr>
+    <tr>
+      <td><label>TO NAME</label></td>
+      <td>:</td>
+      <td><input type="text" id="tname" placeholder="NAME"></td>
+    </tr>
+    <tr>
+      <td><label>TO ADDRESS</label></td>
+      <td>:</td>
+      <td><input type="text" id="tadd" placeholder="ADDRESS"></td>
+    </tr>
+    <tr>
+      <td><label>SUB</label></td>
+      <td>:</td>
+      <td >
+      <select id="gender">
+        <option value="SIR">SIR</option>
+        <option value="MADAM">MADAM</option>
+      </select>
+      <input id="subject" placeholder="SUBJECT" type="text">
+      </td>
+    </tr>
+    <tr>
+      <td><label>REASON</label></td>
+      <td>:</td>
+      <td><input type="text"  id="reason1" placeholder="REASON"></td>
+    </tr>
+    <tr>
+    <td>FROM</td>
+    <td>:</td>
+    <td><input type="date" id="fromdate1">
+      TO<input type="date" id="todate1"></td>
+    </tr>
+  <tr>
+    <td>NUMBER OF DAYS</td>
+    <td>:</td>
+    <td><input type="number" id="nooofdays" placeholder="NO OF DAYS "></td>
+  </tr>
+    <tr >
+      <td><input type="submit" value="GENERATE THE FORM" id="submit" onclick="storedata()"></td>
+    </tr>
+    </table>
+    </form>
+</body>
+</html>
